@@ -241,3 +241,6 @@ commands.ftbquests.import_rewards_from_chest.text=Imported %d items into %s
 commands.ftbquests.weigh_from_emc.usage=/ftbquests weigh_from_emc <reward_table> [missing_emc_weight]
 commands.ftbquests.weigh_from_emc.invalid_id=Invalid Reward Table ID!
 commands.ftbquests.weigh_from_emc.text=Changed item reward weight based on EMC in %s
+commands.ftbquests.yeet_better_questing.usage=/ftbquests yeet_better_questing
+commands.ftbquests.yeet_better_questing.imported=Better Questing quests imported
+commands.ftbquests.yeet_better_questing.failed=Importing Better Questing quests failed

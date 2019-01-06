@@ -164,3 +164,6 @@ commands.ftbquests.complete_instantly.text=Completo!
 commands.ftbquests.set_variable.usage=/ftbquests set_variable <time> <ID da variável> <value>
 commands.ftbquests.set_variable.invalid_id=Variável inválida!
 commands.ftbquests.set_variable.set=Variável definida com sucesso!
+commands.ftbquests.yeet_better_questing.usage=/ftbquests yeet_better_questing
+commands.ftbquests.yeet_better_questing.imported=Better Questing missões importadas
+commands.ftbquests.yeet_better_questing.failed=Importing Better Questing quests failed

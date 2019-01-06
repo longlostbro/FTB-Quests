@@ -6,6 +6,7 @@ import com.feed_the_beast.ftblib.lib.util.NBTUtils;
 import com.feed_the_beast.ftbquests.net.edit.MessageDeleteObjectResponse;
 import com.feed_the_beast.ftbquests.util.FTBQuestsTeamData;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.server.MinecraftServer;
 
 import javax.annotation.Nullable;
 import java.io.File;
@@ -48,6 +49,12 @@ public class ServerQuestFile extends QuestFile
 		isLoading = true;
 		readDataFull(nbt);
 		isLoading = false;
+		return true;
+	}
+
+	public boolean importBetterQuestingQuests(MinecraftServer server)
+	{
+		// Load Better Questing databases and import into FTBQ
 		return true;
 	}
 
