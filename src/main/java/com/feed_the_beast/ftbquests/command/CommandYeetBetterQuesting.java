@@ -2,6 +2,7 @@ package com.feed_the_beast.ftbquests.command;
 
 import com.feed_the_beast.ftblib.lib.util.NBTUtils;
 import com.feed_the_beast.ftbquests.net.MessageSyncEditingMode;
+import com.feed_the_beast.ftbquests.quest.BetterQuestingImporter;
 import com.feed_the_beast.ftbquests.quest.ServerQuestFile;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
@@ -53,16 +54,15 @@ public class CommandYeetBetterQuesting extends CommandBase
 	@Override
 	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
 	{
-		EntityPlayerMP player = args.length >= 2 ? getPlayer(server, sender, args[1]) : getCommandSenderAsPlayer(sender);
-		boolean success = ServerQuestFile.INSTANCE.importBetterQuestingQuests(server);
+		boolean success = new BetterQuestingImporter().ImportBetterQuestingQuests(server);
 
 		if (success)
 		{
-			sender.sendMessage(new TextComponentTranslation("commands.ftbquests.editing_mode.imported", player.getDisplayName()));
+			sender.sendMessage(new TextComponentTranslation("commands.ftbquests.editing_mode.imported"));
 		}
 		else
 		{
-			sender.sendMessage(new TextComponentTranslation("commands.ftbquests.editing_mode.failed", player.getDisplayName()));
+			sender.sendMessage(new TextComponentTranslation("commands.ftbquests.editing_mode.failed"));
 		}
 	}
 }

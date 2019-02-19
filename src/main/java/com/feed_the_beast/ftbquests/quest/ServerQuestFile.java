@@ -5,11 +5,18 @@ import com.feed_the_beast.ftblib.lib.data.Universe;
 import com.feed_the_beast.ftblib.lib.util.NBTUtils;
 import com.feed_the_beast.ftbquests.net.edit.MessageDeleteObjectResponse;
 import com.feed_the_beast.ftbquests.util.FTBQuestsTeamData;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.MinecraftServer;
+import org.apache.logging.log4j.Level;
 
 import javax.annotation.Nullable;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -49,12 +56,6 @@ public class ServerQuestFile extends QuestFile
 		isLoading = true;
 		readDataFull(nbt);
 		isLoading = false;
-		return true;
-	}
-
-	public boolean importBetterQuestingQuests(MinecraftServer server)
-	{
-		// Load Better Questing databases and import into FTBQ
 		return true;
 	}
 
